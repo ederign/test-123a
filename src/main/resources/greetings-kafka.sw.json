@@ -84,12 +84,7 @@
     {
       "name": "GreetPerson",
       "type": "operation",
-      "actions": [
-        {
-          "name": "greetAction",
-          "functionRef":
-        }
-      ],
+      
       "end": {
         "terminate": true
       }
