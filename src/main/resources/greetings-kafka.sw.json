@@ -6,7 +6,11 @@
   "expressionLang": "jsonpath",
   "description": "JSON based greeting workflow",
   "start": "HandleNewGreet",
-  "functions": [
+  "functions": [{
+    "name": "addPet",
+    "operation": "https://bu98.serviceregistry.rhcloud.com/t/c9d09cb5-1a8e-4065-a1c2-d6f072bf159a/apis/registry/v2/groups/test/artifacts/pestore#addPet",
+    "type": "rest"
+  },
     {
       "name": "printMessage",
       "type": "custom",
@@ -83,12 +87,7 @@
       "actions": [
         {
           "name": "greetAction",
-          "functionRef": {
-            "refName": "printMessage",
-            "arguments": {
-              "message": "$.greeting $.name"
-            }
-          }
+          "functionRef":
         }
       ],
       "end": {
